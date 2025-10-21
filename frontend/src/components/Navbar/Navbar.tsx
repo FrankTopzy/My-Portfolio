@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <div className="flex justify-center w-full">
-      <header className={`${Styles.header} flex items-center justify-between fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-4 px-10 rounded-xl hover:scale-105 transition-all`}>
+      <header className={`${Styles.header} flex items-center justify-between fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-4 px-10 rounded-xl hover:scale-105 transition-all z-100`}>
         <div className="flex items-center mr-[280px] font-[Lobster] font-bold">
           <BiCode className='text-2xl font-bold'/>
           <span className={`${scrollUp ? 'text-4xl' : 'text-5xl'} transition-all`}>TA</span>
