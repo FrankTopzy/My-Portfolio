@@ -2,7 +2,7 @@
 
 function Projects() {
   return (
-    <div>
+    <div className="bg-[var(--navbar-bg)] text-white flex flex-col h-[70vh]" id="projects">
       Projects
     </div>
   )
