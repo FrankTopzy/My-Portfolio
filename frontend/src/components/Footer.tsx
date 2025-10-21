@@ -2,7 +2,7 @@
 
 function Footer() {
   return (
-    <div>
+    <div className="flex flex-col h-[40vh]">
       Footer
     </div>
   )
