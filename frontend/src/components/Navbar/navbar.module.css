@@ -4,3 +4,31 @@
   font-family: 'Roboto', !important;
   font-weight: 200;
 }
+
+.rNav {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    display: none;
+  }
+
+  .rNav {
+    display: flex;
+  }
+
+  .navMenu {
+    display: block;
+  }
+
+  .header {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    width: 85%;
+  }
+}
