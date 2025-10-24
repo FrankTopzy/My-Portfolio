@@ -29,10 +29,10 @@ function HeroSection() {
         </div>
 
         <div className='flex items-center justify-center mt-4 gap-3'>
-          <Link to={''} className='hover:scale-110 hover:translate-y-[-5px] transition-all' target='blank'><img src={linkedIn} alt="" className='rounded-full max-sm:w-[40px] transition-all'/></Link>
-          <Link to={''} className='bg-white p-1 rounded-full border-4 border-black hover:scale-110 hover:translate-y-[-5px] transition-all'><FaXTwitter className='text-black text-2xl md:text-3xl'/></Link>
-          <Link to={''}><img src={gitHub} alt="" className='rounded-full max-sm:w-[40px] hover:scale-110 hover:translate-y-[-5px] transition-all'/></Link>
-          <Link to={''}><img src={instaLogo} alt="" className='rounded-full hover:scale-110 hover:translate-y-[-5px] transition-all max-sm:w-[40px]'/></Link>
+          <Link to={'www.linkedin.com/in/temitope-adeoye-adeshina'} className='hover:scale-110 hover:translate-y-[-5px] transition-all' target='blank'><img src={linkedIn} alt="" className='rounded-full max-sm:w-[40px] transition-all'/></Link>
+          <Link to={'https://x.com/frank_topzy?s=09'} target='blank' className='bg-white p-1 rounded-full border-4 border-black hover:scale-110 hover:translate-y-[-5px] transition-all'><FaXTwitter className='text-black text-2xl md:text-3xl'/></Link>
+          <Link to={'http://github.com/FrankTopzy'} target='blank'><img src={gitHub} alt="" className='rounded-full max-sm:w-[40px] hover:scale-110 hover:translate-y-[-5px] transition-all'/></Link>
+          <Link to={'https://www.instagram.com/frank_topzy'} target='blank'><img src={instaLogo} alt="" className='rounded-full hover:scale-110 hover:translate-y-[-5px] transition-all max-sm:w-[40px]'/></Link>
         </div>
 
         <div className="absolute bottom-4 w-full flex justify-center items-center">
