@@ -3,9 +3,12 @@ import { BiCode } from 'react-icons/bi';
 import { BiCodeAlt } from 'react-icons/bi';
 import { Link , animateScroll as scroll} from 'react-scroll';
 import { useEffect, useState } from 'react';
+import { HiOutlineMenuAlt2 } from 'react-icons/hi';
+import { navLinks } from '../../data/constants';
+import type { NavbarType } from '../../data/types';
 
 
-function Navbar() {
+function Navbar({isOpen, setIsOpen}: NavbarType) {
   const [scrollUp, setScrollUp] = useState<boolean>(false);
 
   useEffect(() => {
@@ -21,38 +24,41 @@ function Navbar() {
 
   return (
     <div className="flex justify-center w-full">
-      <header className={`${Styles.header} flex items-center justify-between fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-4 px-10 rounded-xl hover:scale-105 transition-all z-100`}>
-        <div className="flex items-center mr-[280px] font-[Lobster] font-bold">
+      <header className={`${Styles.header} flex items-center justify-between gap-[100px] fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-100`}>
+        <div className="flex items-center font-[Lobster] font-bold">
           <BiCode className='text-2xl font-bold'/>
-          <span className={`${scrollUp ? 'text-4xl' : 'text-5xl'} transition-all`}>TA</span>
+          <span className={`${scrollUp ? 'text-4xl' : 'text-5xl'} max-md:text-3xl lg: xl: transition-all text-white`}>TA</span>
           <BiCodeAlt className='text-2xl font-bold'/>
         </div>
 
-        <div className='flex items-center gap-20'>
-          <nav>
-            <ul className="flex gap-10">
-              <Link to={'home'} spy={true} smooth={true} duration={500} className='flex items-center gap-1 justify-center cursor-pointer text-md hover:translate-y-[-4px] hover:scale-115 transition-all hover:font-bold'>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E3E7D3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg> 
-                Home
-              </Link>
-              <Link to='about' spy={true} smooth={true} duration={500} className='flex items-center gap-1 justify-center cursor-pointer text-md hover:translate-y-[-4px] hover:scale-115 transition-all hover:font-bold'>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E3E7D3"><path d="M120-120v-66.67h720V-120H120Zm66.67-160q-27 0-46.84-19.83Q120-319.67 120-346.67v-426.66q0-27 19.83-46.84Q159.67-840 186.67-840h586.66q27 0 46.84 19.83Q840-800.33 840-773.33v426.66q0 27-19.83 46.84Q800.33-280 773.33-280H186.67Zm0-66.67h586.66v-426.66H186.67v426.66Zm0 0v-426.66 426.66Z"/></svg>
-                About Frank
-              </Link>
-              <Link to={'experience'} spy={true} smooth={true} duration={500} className='flex items-center gap-1 justify-center cursor-pointer text-md hover:translate-y-[-4px] hover:scale-115 transition-all hover:font-bold'>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E3E7D3"><path d="M146.67-186.67v-466.66 466.66-19.5 19.5Zm0 66.67q-27 0-46.84-19.83Q80-159.67 80-186.67v-466.66q0-27 19.83-46.84Q119.67-720 146.67-720H320v-93.33q0-26.34 19.83-46.5Q359.67-880 386.67-880h186.66q27 0 46.84 20.17Q640-839.67 640-813.33V-720h173.33q27 0 46.84 19.83Q880-680.33 880-653.33v207q-15.33-11.67-31.67-20.84-16.33-9.16-35-16.83v-169.33H146.67v466.66h317q3.66 17.67 9.66 34.34 6 16.66 14.34 32.33h-341Zm240-600h186.66v-93.33H386.67V-720ZM720-44.67q-80.33 0-137.83-57.5-57.5-57.5-57.5-137.83 0-80.33 57.5-137.83 57.5-57.5 137.83-57.5 80.33 0 137.83 57.5 57.5 57.5 57.5 137.83 0 80.33-57.5 137.83-57.5 57.5-137.83 57.5ZM738-244v-120h-41.33v133.18l94.66 89.49 27.34-27.34L738-244Z"/></svg>
-                Experience
-              </Link>
-              <Link to={'projects'} spy={true} smooth={true} duration={500} className='flex items-center gap-1 justify-center cursor-pointer text-md hover:translate-y-[-4px] hover:scale-115 transition-all hover:font-bold'>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E3E7D3"><path d="M146.67-226.67v-506.66 540-33.34Zm0 66.67q-27 0-46.84-20.17Q80-200.33 80-226.67v-506.66q0-26.34 19.83-46.5Q119.67-800 146.67-800H414l66.67 66.67h332.66q26.34 0 46.5 20.16Q880-693 880-666.67v267.34h-66.67v-267.34H453l-66.67-66.66H146.67v506.66H410V-160H146.67ZM611.33-59.33l-134.66-134 134.66-134 46.67 47-87 87 87 87-46.67 47Zm173.34 0-46.67-47 87-87-87-87 46.67-47 134.66 134-134.66 134Z"/></svg>
-                Projects
-              </Link>
-              <Link to={'contact'} spy={true} smooth={true} duration={500} className='flex items-center gap-1 justify-center cursor-pointer text-md hover:translate-y-[-4px] hover:scale-115 transition-all hover:font-bold'>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E3E7D3"><path d="M480-400q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400ZM320-240h320v-23q0-24-13-44t-36-30q-26-11-53.5-17t-57.5-6q-30 0-57.5 6T369-337q-23 10-36 30t-13 44v23ZM733.33-80H226.67q-27 0-46.84-19.83Q160-119.67 160-146.67v-666.66q0-27 19.83-46.84Q199.67-880 226.67-880h334L800-640.67v494q0 27-19.83 46.84Q760.33-80 733.33-80Zm0-66.67v-464.66l-202-202H226.67v666.66h506.66Zm-506.66 0v-666.66 666.66Z"/></svg>
-                Contact Frank
-              </Link>
+        <div className='flex relative items-center'>
+          <nav className={`${Styles.navbar}`}>
+            <ul className="hidden flex-col md:flex md:flex-row gap-7 xl:gap-8 text-[12px] md:text-sm">
+              {navLinks.map((link, index) => (
+                <Link to={`${link.id}`} spy={true} smooth={true} duration={500} key={index} className='flex items-center gap-1 justify-center cursor-pointer whitespace-nowrap hover:translate-y-[-4px] hover:scale-105 transition-all hover:font-bold'>
+                  <svg xmlns="" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E3E7D3"><path d={`${link.svgPath}`}/></svg> 
+                  {link.title}
+                </Link>
+              ))}
             </ul>
           </nav>
+
+          {isOpen && (
+            <nav className={`${Styles.rNav} absolute  w-[200px] bg-[var(--navbar-bg)] right-0 top-12 rounded-2xl`}>
+              <ul className="flex flex-col items-start">
+                {navLinks.map((link, index) => (
+                  <Link to={`${link.id}`} spy={true} smooth={true} duration={500} key={index} className='flex items-center gap-1 justify-center px-5 py-4 cursor-pointer whitespace-nowrap hover:translate-y-[-4px] hover:scale-105 transition-all hover:font-bold' onClick={() => setIsOpen(false)}>
+                    <svg xmlns="" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E3E7D3"><path d={`${link.svgPath}`}/></svg> 
+                    {link.title}
+                  </Link>
+                ))}
+              </ul>
+            </nav>
+          )}
+
+          <div className={`${Styles.navMenu} block md:hidden`} onClick={() => setIsOpen(!isOpen)}>
+            <HiOutlineMenuAlt2 className='text-2xl'/>
+          </div>
         </div>
       </header>
     </div>
