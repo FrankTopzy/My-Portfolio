@@ -15,3 +15,9 @@ export type NavbarType = {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>
 }
+
+export type TechnologiesType = {
+  id: string;
+  name: string;
+  imgSrc: string;
+}
