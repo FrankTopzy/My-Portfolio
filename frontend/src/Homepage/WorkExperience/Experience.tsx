@@ -1,14 +1,33 @@
 import Title from "../../components/Title"
 import VerticalTimelin from "../../components/VerticalTimelin"
 import { motion } from 'framer-motion'
+import { technologies } from "../../data/constants"
+import Tilt from 'react-parallax-tilt'
 
 
 function Experience() {
   return (
     <div className="bg-black text-white flex flex-col items-center" id="experience">
-      <section className="pt-[100px] lg:px-[200px] px-10 pb-10 max-w-[1300px]">
-        <Title title="Work Experience" align="left"/>
+      <section className="pt-[100px] lg:px-[200px] px-[0px] pb-10 max-w-[1300px]">
+        <div className="">
+          <Title title="Work Experience" align="center" pad={20}/>
+        </div>
+
         <VerticalTimelin/>
+
+        <div className="w-full mt-20 mb-7">
+          <h2 className="text-3xl text-center md:text-left">Tech Stack</h2>
+          <div className="w-full flex flex-wrap justify-center gap-4 mt-5">
+            {technologies.map((lang) => (
+              <Tilt key={lang.id}>
+                <div className="border group flex flex-col items-center gap-3 p-4 w-[130px] hover:bg-[#E6E49F] hover:text-black hover:transition-all">
+                  <img src={lang.imgSrc} alt={lang.name} width={40} className="group-hover:translate-y-[-2px] transition-all"/>
+                  <p>{lang.name}</p>
+                </div>
+              </Tilt>
+            ))}
+          </div>
+        </div>
 
         <div className="flex justify-center items-center">
           <a href="#projects" className=''>
