@@ -10,9 +10,7 @@ function AboutMeSection() {
   return (
     <div className="bg-[var(--navbar-bg)] text-white flex justify-center pb-[100px]" id='about'>
       <section className="relative pt-[100px] max-w-[1350px]">
-        <div 
-          className="px-[30px] md:px-[200px]"
-        >
+        <div className="px-[30px] sm:px-[90px] xl:px-[200px] w-full">
           <Title title="About Me" align="left"/>
 
           <div>
@@ -28,7 +26,7 @@ function AboutMeSection() {
           </div>
         </div>
 
-        <div className="absolute w-full flex justify-center items-center">
+        <div className="absolute mt-3 w-full flex justify-center items-center">
           <a href="#experience" className=''>
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
               <motion.div
