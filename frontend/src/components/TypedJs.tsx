@@ -4,7 +4,6 @@ const TypedJs = () => (
   <ReactTyped
     strings={[
       "FRONTEND DEVELOPER.",
-      "FOREX TRADER.",
       "GRAPHICS DESIGNER.",
     ]}
     typeSpeed={40}
