@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -8,12 +7,11 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import CodeIcon from '@mui/icons-material/Code';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
 import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Tilt  from 'react-parallax-tilt';
-import { FaTree } from 'react-icons/fa';
+import { FaTree } from 'react-icons/fa6';
 
 function VerticalTime() {
   const isMobile = useMediaQuery('(max-width: 600px)');
@@ -29,7 +27,7 @@ function VerticalTime() {
           fontSize={18}
           display={`${isMobile && 'none'}`} 
         >
-          2022 - 2023
+          January 2022 - January 2023
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -38,17 +36,17 @@ function VerticalTime() {
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }} className={`${isMobile && 'w-[80%]'}`}>
+        <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[80%]'}`}>
           <Tilt>
-            <div className='card-shadow px-5 md:px-10 bg-[#25291C] py-[20px] rounded-2xl border-5'>
+            <div className='px-7 md:px-10 bg-[#25291C] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5'>
               <div>
-                <Typography variant="h6" component="span">Frontend Developer</Typography>
-                <Typography>EduSkill Foundation | AWS Academy | AICTE</Typography>
+                <Typography variant="h5" component="span">Graphics Designer.</Typography>
+                <Typography color='#e6e49f'>Canva | Graphics Design </Typography>
               </div>
 
               <div>
                 <ul className='list-disc'>
-                  <li>Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.</li>
+                  <li>Acquired hands-on knowledge of Graphics Design, delving into the design world.</li>
                   <li>also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.</li>
                 </ul>
               </div>
@@ -62,9 +60,10 @@ function VerticalTime() {
           sx={{ m: 'auto 0' }}
           variant="body2"
           color="white"
+          fontSize={18}
           display={`${isMobile && 'none'}`}
         >
-          2023 - 2026
+          April 2023 - June 2026
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector  sx={{ bgcolor: '#25291C' }}/>
@@ -73,12 +72,12 @@ function VerticalTime() {
           </TimelineDot>
           <TimelineConnector  sx={{ bgcolor: '#25291C' }}/>
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }} className={`${isMobile && 'w-[80%]'}`}>
+        <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}`  }} className={`${isMobile && 'w-[80%]'}`}>
           <Tilt>
-            <div className='card-shadow px-10 bg-[#e3e7d3] py-[20px] rounded-2xl border-5 border-[#25291C] text-left text-[#25291C]'>
+            <div className='px-7 md:px-10 bg-[#e3e7d3] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5 border-[#25291C] text-left text-[#25291C]'>
               <div>
-                <Typography variant="h6" component="span">Frontend Developer</Typography>
-                <Typography>EduSkill Foundation | AWS Academy | AICTE</Typography>
+                <Typography variant="h5" component="span">Computer Scientist</Typography>
+                <Typography color='gray'>FUNAAB | CSC</Typography>
               </div>
 
               <div>
@@ -97,9 +96,10 @@ function VerticalTime() {
           sx={{ m: 'auto 0' }}
           variant="body2"
           color="white"
+          fontSize={18}
           display={`${isMobile && 'none'}`}
         >
-          2023 - 2026
+          October 2023 - till date
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -108,18 +108,19 @@ function VerticalTime() {
           </TimelineDot>
           <TimelineConnector/>
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }} className={`${isMobile && 'w-[80%]'}`}>
+        <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[80%]'}`}>
           <Tilt>
-            <div className='px-10 card-shadow bg-[#e6e49f] py-[20px] rounded-2xl border-5 border-[var(--color-3)] text-black'>
+            <div className='px-7 md:px-10 bg-[#e6e49f] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5 border-[var(--color-3)] text-black'>
               <div>
-                <Typography variant="h6" component="span">Frontend Developer</Typography>
-                <Typography>EduSkill Foundation | AWS Academy | AICTE</Typography>
+                <Typography variant="h5" component="span">Frontend Developer</Typography>
+                <Typography>SuperSimpleDev and Co. | Software Engineering</Typography>
               </div>
 
               <div>
                 <ul className='list-disc'>
-                  <li>Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.</li>
-                  <li>also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.</li>
+                  <li>Learnt the basics of Web development.</li>
+                  <li>Learnt different frameworks and preprocessor such as Tailwind CSS and SASS respectively.</li>
+                  <li>I also bacame a React + Typescript developer building different functioning and responsive websites.</li>
                 </ul>
               </div>
             </div>
@@ -132,9 +133,10 @@ function VerticalTime() {
           sx={{ m: 'auto 0' }}
           variant="body2"
           color="white"
+          fontSize={18}
           display={`${isMobile && 'none'}`}
         >
-          2023 - 2026
+          February 2025 - August 2025
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: '#25291C' }} />
@@ -143,18 +145,19 @@ function VerticalTime() {
           </TimelineDot>
           <TimelineConnector sx={{ bgcolor: '#25291C' }}/>
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }} className={`${isMobile && 'w-[80%]'}`}>
+        <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[90%]'}`}>
           <Tilt>
-            <div className='card-shadow px-10 bg-white py-[20px] rounded-2xl text-left border-5 text-black'>
+            <div className='px-7 md:px-10 bg-white py-[10px] md:py-[20px] rounded-2xl text-left border-2 md:border-5 border-[#25291C] text-black'>
               <div>
-                <Typography variant="h6" component="span">Frontend Developer</Typography>
-                <Typography>EduSkill Foundation | AWS Academy | AICTE</Typography>
+                <Typography variant="h5" component="span">Frontend Developer</Typography>
+                <Typography color='grey'>FRIN | Software Development</Typography>
               </div>
 
               <div>
                 <ul className='list-disc'>
-                  <li>Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.</li>
-                  <li>also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.</li>
+                  <li>Completed my internship, gaining a strong foundation in Frontend Development, including brief knowledge about Backend Development.</li>
+                  <li>Acquired practical skills in web design and server side hosting with XAMPP, including sending info and retrieving from databases.</li>
+                  <li>Developed responsive websites with HTML, CSS and Hypertext Preprocessor (PHP).</li>
                 </ul>
               </div>
             </div>
