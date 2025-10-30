@@ -24,10 +24,10 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
 
   return (
     <div className="flex justify-center w-full">
-      <header className={`${Styles.header} flex items-center justify-between gap-[100px] fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-100`}>
+      <header className={`${Styles.header} flex items-center justify-between gap-[150px] fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-100`}>
         <div className="flex items-center font-[Lobster] font-bold">
           <BiCode className='text-2xl font-bold'/>
-          <span className={`${scrollUp ? 'text-4xl' : 'text-5xl'} max-md:text-3xl lg: xl: transition-all text-white`}>TA</span>
+          <span className={`${scrollUp ? 'text-4xl text-[#E6E49F]' : 'text-5xl text-white'} max-md:text-3xl lg: xl: transition-all`}>TA</span>
           <BiCodeAlt className='text-2xl font-bold'/>
         </div>
 
