@@ -11,7 +11,7 @@ type ServiceCardPropsType = {
 
 function ServiceCard({src, progLang} : ServiceCardPropsType) {
   return (
-    <Tilt className="w-[200px]">
+    <Tilt className="w-[300px] lg:w-[200px]">
       <motion.div className="w-full bg-[#E6E49F] text-black green-pink-gradient p-[1px] rounded-[20px] shadow-card">
         <div className='flex justify-center items-center flex-col gap-10 py-6'>
           <img src={src} width={70}/>
