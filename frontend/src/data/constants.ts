@@ -1,4 +1,5 @@
-import type { NavLinksType } from "./types";
+import type { NavLinksType, TechnologiesType } from "./types";
+import { v4 as uuidV4 } from 'uuid'
 
 export const navLinks:NavLinksType[] = [{
   title: "Home",
@@ -21,3 +22,224 @@ export const navLinks:NavLinksType[] = [{
   id: "contact",
   svgPath: "M480-400q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400ZM320-240h320v-23q0-24-13-44t-36-30q-26-11-53.5-17t-57.5-6q-30 0-57.5 6T369-337q-23 10-36 30t-13 44v23ZM733.33-80H226.67q-27 0-46.84-19.83Q160-119.67 160-146.67v-666.66q0-27 19.83-46.84Q199.67-880 226.67-880h334L800-640.67v494q0 27-19.83 46.84Q760.33-80 733.33-80Zm0-66.67v-464.66l-202-202H226.67v666.66h506.66Zm-506.66 0v-666.66 666.66Z"
 },]
+
+export const technologies:TechnologiesType[] = [{
+  id: uuidV4(),
+  name: 'HTML',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'CSS',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'Tailwind CSS',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'SASS',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'JavaScript',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'TypeScript',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'ReactJs',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'PHP',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'Git',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'Github',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'
+}, {
+  id: uuidV4(),
+  name: 'Figma',
+  imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg'
+},]
+
+export const dataset = [
+  {
+    london: 59,
+    paris: 57,
+    newYork: 86,
+    seoul: 21,
+    month: 'Jan',
+  },
+  {
+    london: 50,
+    paris: 52,
+    newYork: 78,
+    seoul: 28,
+    month: 'Feb',
+  },
+  {
+    london: 47,
+    paris: 53,
+    newYork: 106,
+    seoul: 41,
+    month: 'Mar',
+  },
+  {
+    london: 54,
+    paris: 56,
+    newYork: 92,
+    seoul: 73,
+    month: 'Apr',
+  },
+  {
+    london: 57,
+    paris: 69,
+    newYork: 92,
+    seoul: 99,
+    month: 'May',
+  },
+  {
+    london: 60,
+    paris: 63,
+    newYork: 103,
+    seoul: 144,
+    month: 'June',
+  },
+  {
+    london: 59,
+    paris: 60,
+    newYork: 105,
+    seoul: 319,
+    month: 'July',
+  },
+  {
+    london: 65,
+    paris: 60,
+    newYork: 106,
+    seoul: 249,
+    month: 'Aug',
+  },
+  {
+    london: 51,
+    paris: 51,
+    newYork: 95,
+    seoul: 131,
+    month: 'Sept',
+  },
+  {
+    london: 60,
+    paris: 65,
+    newYork: 97,
+    seoul: 55,
+    month: 'Oct',
+  },
+  {
+    london: 67,
+    paris: 64,
+    newYork: 76,
+    seoul: 48,
+    month: 'Nov',
+  },
+  {
+    london: 61,
+    paris: 70,
+    newYork: 103,
+    seoul: 25,
+    month: 'Dec',
+  },
+];
+
+export function valueFormatter(value: number | null) {
+  return `${value}mm`;
+}
+
+export const projects = [{
+  id: uuidV4(),
+  imgSrc: '',
+  title: 'My Mini React App',
+  projectInfo: '',
+
+  techStack: [{
+    stack: 'React Js',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+  }, {
+    stack: 'Tailwind CSS',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+  }, {
+    stack: 'Netlify',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
+  }],
+
+  liveLink: 'https://franksminireactapp.netlify.app/',
+  sourceCode: 'https://github.com/FrankTopzy/Mini-React-App.git'
+}, {
+  id: uuidV4(),
+  imgSrc: '',
+  title: 'Clothex Clothing Store',
+  projectInfo: '',
+
+  techStack: [{
+    stack: 'React Js',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+  }, {
+    stack: 'Tailwind CSS',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+  }, {
+    stack: 'Netlify',
+    imgSrc: ''
+  }],
+
+  liveLink: 'https://franksminireactapp.netlify.app/',
+  sourceCode: 'https://github.com/FrankTopzy/Clothex.git'
+}, {
+  id: uuidV4(),
+  imgSrc: '',
+  title: 'Bellefull Mini Mart',
+  projectInfo: '',
+
+  techStack: [{
+    stack: 'HTML',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg'
+  }, {
+    stack: 'CSS',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg'
+  }, {
+    stack: 'PHP',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg'
+  }, {
+    stack: 'Paystack',
+    imgSrc: ''
+  }],
+
+  liveLink: 'https://franksminireactapp.netlify.app/',
+  sourceCode: 'https://github.com/FrankTopzy/BelleFull.git'
+}, {
+  id: uuidV4(),
+  imgSrc: '',
+  title: 'NGRAVE Website - Cloned',
+  projectInfo: '',
+
+  techStack: [{
+    stack: 'React Js',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+  }, {
+    stack: 'TypeScript',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
+  }, {
+    stack: 'Tailwind CSS',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+  }, {
+    stack: 'Netlify',
+    imgSrc: ''
+  }],
+
+  liveLink: 'https://franksminireactapp.netlify.app/',
+  sourceCode: 'https://github.com/FrankTopzy/Ngrave.git'
+}]
