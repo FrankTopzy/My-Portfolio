@@ -5,34 +5,43 @@ import Styles from './hero.module.css'
 import gitHub from '../../assets/icons8-github-48.png'
 import instaLogo from '../../assets/insta-logo/icons8-instagram-48.png'
 import linkedIn from '../../assets/icons8-linkedin-color/icons8-linkedin-48.png'
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaArrowRight, FaXTwitter } from 'react-icons/fa6';
 import TypedJs from '../../components/TypedJs'
 import { motion } from 'framer-motion'
+
 
 
 function HeroSection() {
   return (
     <div className="bg-black text-white flex justify-center pt-27 lg:pt-34" id='home'>
       <section className='pb-20 relative'>
-        <div className='flex justify-center'>
-          <img src={frank} alt="" className={`${Styles.blobImg} w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] object-cover`}/>
-        </div>
+        <div className='flex gap-[20px] sm md:gap-[100px] lg:gap-[130px] py-[30px] lg:py-[80px] flex-col md:flex-row-reverse'>
+          <div className='flex justify-center'>
+            <img src={frank} alt="" className={`${Styles.blobImg} w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] object-cover`}/>
+          </div>
 
-        <div className='text-center mt-10'>
-          <h1 className='flex flex-col text-sm md:text-lg'>
-            Hey It's me 
-            <span className={`${Styles.webkitText} text-3xl lg:text-5xl font-extrabold`}>Temitope Adeoye</span>
-            a.k.a Frank Topzy
-          </h1>
+          <div className="">
+            <div className='text-center mt-10'>
+              <h1 className='flex flex-col text-sm md:text-lg'>
+                Hey It's me 
+                <span className={`${Styles.webkitText} text-3xl lg:text-6xl font-extrabold`}>Temitope Adeoye</span>
+                a.k.a Frank Topzy
+              </h1>
 
-          <h2 className='text-xl mt-2'>I'm a <span className={`${Styles.fancyText} `}><TypedJs/></span></h2>
-        </div>
+              <h2 className='text-xl mt-2'>I'm a <span className={`${Styles.fancyText} `}><TypedJs/></span></h2>
+            </div>
 
-        <div className='flex items-center justify-center mt-4 gap-3'>
-          <Link to={'www.linkedin.com/in/temitope-adeoye-adeshina'} className='hover:scale-110 hover:translate-y-[-5px] transition-all' target='blank'><img src={linkedIn} alt="" className='rounded-full max-sm:w-[40px] transition-all'/></Link>
-          <Link to={'https://x.com/frank_topzy?s=09'} target='blank' className='bg-white p-1 rounded-full border-4 border-black hover:scale-110 hover:translate-y-[-5px] transition-all'><FaXTwitter className='text-black text-2xl md:text-3xl'/></Link>
-          <Link to={'http://github.com/FrankTopzy'} target='blank'><img src={gitHub} alt="" className='rounded-full max-sm:w-[40px] hover:scale-110 hover:translate-y-[-5px] transition-all'/></Link>
-          <Link to={'https://www.instagram.com/frank_topzy'} target='blank'><img src={instaLogo} alt="" className='rounded-full hover:scale-110 hover:translate-y-[-5px] transition-all max-sm:w-[40px]'/></Link>
+            <div className='flex flex-col'>
+              <div className="flex items-center justify-center mt-4 gap-3">
+                <Link to={'www.linkedin.com/in/temitope-adeoye-adeshina'} className='hover:scale-110 hover:translate-y-[-5px] transition-all' target='blank'><img src={linkedIn} alt="" className='rounded-full max-sm:w-[40px] transition-all'/></Link>
+                <Link to={'https://x.com/frank_topzy?s=09'} target='blank' className='bg-white p-1 rounded-full border-4 border-black hover:scale-110 hover:translate-y-[-5px] transition-all'><FaXTwitter className='text-black text-2xl md:text-3xl'/></Link>
+                <Link to={'http://github.com/FrankTopzy'} target='blank'><img src={gitHub} alt="" className='rounded-full max-sm:w-[40px] hover:scale-110 hover:translate-y-[-5px] transition-all'/></Link>
+                <Link to={'https://www.instagram.com/frank_topzy'} target='blank'><img src={instaLogo} alt="" className='rounded-full hover:scale-110 hover:translate-y-[-5px] transition-all max-sm:w-[40px]'/></Link>
+              </div>
+              
+              <button className="flex gap-1 group items-center px-5 py-2 rounded-4xl text-white bg-[#25291C] mt-5 self-center border-2 border-[#E6E49F] hover:card-shadow transition-all">Download Resume <FaArrowRight className='group-hover:translate-x-1 transition-all'/></button>
+            </div>
+          </div>
         </div>
 
         <div className="absolute bottom-4 w-full flex justify-center items-center">
