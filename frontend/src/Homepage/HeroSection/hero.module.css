@@ -1,6 +1,6 @@
 .blobImg {
   animation: blob 40s ease-in-out infinite forwards;
-  box-shadow: 7px 7px 30px rgba(255, 255, 255, 0.8), -7px -7px 30px rgba(255, 255, 255, 0.8);
+  box-shadow: 7px 7px 30px #E6E49F, -7px -7px 30px #E6E49F;
 }
 
 @keyframes blob {
