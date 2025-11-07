@@ -21,3 +21,8 @@ export type TechnologiesType = {
   name: string;
   imgSrc: string;
 }
+
+export type TechStack = {
+  stack: string;
+  imgSrc: string;
+}
