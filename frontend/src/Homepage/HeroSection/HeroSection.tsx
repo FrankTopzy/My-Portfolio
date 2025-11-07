@@ -5,9 +5,10 @@ import Styles from './hero.module.css'
 import gitHub from '../../assets/icons8-github-48.png'
 import instaLogo from '../../assets/insta-logo/icons8-instagram-48.png'
 import linkedIn from '../../assets/icons8-linkedin-color/icons8-linkedin-48.png'
-import { FaArrowRight, FaXTwitter } from 'react-icons/fa6';
+import { FaArrowDown, FaXTwitter } from 'react-icons/fa6';
 import TypedJs from '../../components/TypedJs'
 import { motion } from 'framer-motion'
+import resumePDF from '../../assets/Temitope_Resume.pdf'
 
 
 
@@ -16,8 +17,9 @@ function HeroSection() {
     <div className="bg-black text-white flex justify-center pt-27 lg:pt-34" id='home'>
       <section className='pb-20 relative'>
         <div className='flex gap-[20px] sm md:gap-[100px] lg:gap-[130px] py-[30px] lg:py-[80px] flex-col md:flex-row-reverse'>
-          <div className='flex justify-center'>
+          <div className='flex flex-col items-center gap-9 justify-center'>
             <img src={frank} alt="" className={`${Styles.blobImg} w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] object-cover`}/>
+            <p className='py-2 px-10 rounded-4xl bg-green-600/20 hover:bg-grern-500/20 text-green-600 hover:text-green-500 transition-all'>Open to Work</p>
           </div>
 
           <div className="">
@@ -39,7 +41,7 @@ function HeroSection() {
                 <Link to={'https://www.instagram.com/frank_topzy'} target='blank'><img src={instaLogo} alt="" className='rounded-full hover:scale-110 hover:translate-y-[-5px] transition-all max-sm:w-[40px]'/></Link>
               </div>
               
-              <button className="flex gap-1 group items-center px-5 py-2 rounded-4xl text-white bg-[#25291C] mt-5 self-center border-2 border-[#E6E49F] hover:card-shadow transition-all">Download Resume <FaArrowRight className='group-hover:translate-x-1 transition-all'/></button>
+              <a href={resumePDF} download target='blank' className="flex gap-3 group items-center px-5 py-2 rounded-4xl text-white bg-[#25291C] mt-7 self-center border-2 border-[#E6E49F] hover:card-shadow transition-all">Download Resume <FaArrowDown className='group-hover:translate-x-1 transition-all animate-bounce'/></a>
             </div>
           </div>
         </div>
