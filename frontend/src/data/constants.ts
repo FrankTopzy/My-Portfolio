@@ -1,5 +1,9 @@
 import type { NavLinksType, TechnologiesType } from "./types";
 import { v4 as uuidV4 } from 'uuid'
+//Project Images
+import clothexImg from '../assets/projects/cart.png'
+import belleFullImg from '../assets/projects/Screenshot (25).png';
+import hotelMangImg from '../assets/projects/Screenshot (49).png'
 
 export const navLinks:NavLinksType[] = [{
   title: "Home",
@@ -162,9 +166,9 @@ export function valueFormatter(value: number | null) {
 
 export const projects = [{
   id: uuidV4(),
-  imgSrc: '',
+  imgSrc: clothexImg,
   title: 'My Mini React App',
-  projectInfo: '',
+  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
 
   techStack: [{
     stack: 'React Js',
@@ -181,9 +185,9 @@ export const projects = [{
   sourceCode: 'https://github.com/FrankTopzy/Mini-React-App.git'
 }, {
   id: uuidV4(),
-  imgSrc: '',
+  imgSrc: clothexImg,
   title: 'Clothex Clothing Store',
-  projectInfo: '',
+  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
 
   techStack: [{
     stack: 'React Js',
@@ -193,16 +197,16 @@ export const projects = [{
     imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
   }, {
     stack: 'Netlify',
-    imgSrc: ''
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
   }],
 
   liveLink: 'https://franksminireactapp.netlify.app/',
   sourceCode: 'https://github.com/FrankTopzy/Clothex.git'
 }, {
   id: uuidV4(),
-  imgSrc: '',
+  imgSrc: belleFullImg,
   title: 'Bellefull Mini Mart',
-  projectInfo: '',
+  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
 
   techStack: [{
     stack: 'HTML',
@@ -222,9 +226,9 @@ export const projects = [{
   sourceCode: 'https://github.com/FrankTopzy/BelleFull.git'
 }, {
   id: uuidV4(),
-  imgSrc: '',
+  imgSrc: clothexImg,
   title: 'NGRAVE Website - Cloned',
-  projectInfo: '',
+  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
 
   techStack: [{
     stack: 'React Js',
@@ -237,7 +241,29 @@ export const projects = [{
     imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
   }, {
     stack: 'Netlify',
-    imgSrc: ''
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
+  }],
+
+  liveLink: 'https://franksminireactapp.netlify.app/',
+  sourceCode: 'https://github.com/FrankTopzy/Ngrave.git'
+}, {
+  id: uuidV4(),
+  imgSrc: hotelMangImg,
+  title: 'Hotel Management Website',
+  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
+
+  techStack: [{
+    stack: 'React Js',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+  }, {
+    stack: 'TypeScript',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
+  }, {
+    stack: 'Tailwind CSS',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+  }, {
+    stack: 'Netlify',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
   }],
 
   liveLink: 'https://franksminireactapp.netlify.app/',
