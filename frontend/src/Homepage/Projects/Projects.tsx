@@ -1,12 +1,21 @@
 import { motion } from 'framer-motion'
 import Title from '../../components/Title'
+import ProjectCard from '../../components/ProjectCard'
+import { projects } from '../../data/constants'
 
 function Projects() {
   return (
-    <div className="bg-[var(--navbar-bg)] text-white flex flex-col items-center h-[100vh]" id="projects">
-      <section className='pt-[100px] max-w-[1300px]'>
-        <div>
+    <div className="bg-[var(--navbar-bg)] text-white flex flex-col items-center" id="projects">
+      <section className='pt-[100px] pb-[40px] max-w-[1350px]'>
+        <div className='px-[30px] sm:px-[90px] xl:px-[200px]'>
           <Title title='My Projects' align='left'/>
+          <p>Following projects showcase my skills and experience through examples of my work. Each project is briefly described with links to code repositories in it.</p>
+
+          <div className='my-[50px] w-full items-center gap-6 flex flex-wrap'>
+            {projects.map((project) => (
+              <ProjectCard projectTitle={project.title} projectInfo={project.projectInfo} techStacks={project.techStack} projectLink={project.liveLink} githubLink={project.sourceCode} projectImg={project.imgSrc}/>
+            ))}
+          </div>
         </div>
 
         <div className="flex justify-center items-center">
