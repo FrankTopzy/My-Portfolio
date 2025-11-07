@@ -1,16 +1,40 @@
 import React from 'react'
+import { FaGithub } from 'react-icons/fa6';
 import Tilt from 'react-parallax-tilt'
+//import image from '../assets/projects/cart.png'
+import type { TechStack } from '../data/types';
+import { Link } from 'react-router-dom';
 
-function ProjectCard() {
+
+type Project = {
+  projectTitle: string;
+  projectImg: string;
+  projectInfo: string;
+  techStacks: TechStack[];
+  projectLink: string;
+  githubLink: string;
+}
+function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, githubLink, projectImg}: Project) {
   return (
-    <Tilt>
-      <div>
-        <div>
-          <img src="" alt="hotelmang" />
+    <Tilt className='lg:w-[460px] sm:w-[360px]'>
+      <div className='flex flex-col p-3 border-4 border-gray-600 bg-black/70 rounded-3xl h-[500px]'>
+        <div className='rounded-4xl flex-1 flex'>
+          <img src={projectImg} alt="hotelmang" className='rounded-3xl object-center object-cover border-4 border-[#25291C]'/>
         </div>
 
-        <div>
-          info
+        <div className='mt-[15px] text-white text-[12px]'>
+          <h1 className='text-xl text-gray-400 font-bold'>{projectTitle}</h1>
+          <p className='pt-[10px] text-[##25291C]'>{projectInfo}</p>
+          <div className='flex flex-wrap gap-2 text-[#E6E49F] justify-center'>
+            {techStacks.map((stack, index) => (<p className={`flex gap-1 items-center mt-[10px] ${(index % 2) == 0 ? 'bg-amber-400/50' : 'bg-blue-700/30'}   px-3 rounded-2xl py-1`}>
+            <img src={stack.imgSrc} width={15} alt="" className=''/>
+            {stack.stack}</p>))}
+          </div>
+
+          <div className='flex gap-2 mt-[15px] item-center justify-center'>
+            <Link to={projectLink} target='blank' className='transition-all py-1 hover:text-gray-300 px-3 bg-green-600/50 rounded-2xl cursor-pointer'>Live Link</Link>
+            <Link to={githubLink} target='blank' className='bg-green-600/50 hover:text-gray-300 transition-all cursor-pointer py-1 px-3 rounded-2xl flex items-center gap-1'><FaGithub/> Github Link</Link>
+          </div>
         </div>
       </div>
     </Tilt>
