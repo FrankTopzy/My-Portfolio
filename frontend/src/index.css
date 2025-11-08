@@ -12,7 +12,6 @@
   --color-3: rgb(152, 156, 148);
   --color-4: #BDC2BF;
   --color-5: #E3E7D3;
-
 }
 
 ::-webkit-scrollbar {
@@ -46,4 +45,5 @@
 
 body{
   font-family: 'DM sans' !important;
+  user-select: none;
 }
