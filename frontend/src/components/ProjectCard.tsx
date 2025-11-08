@@ -18,16 +18,16 @@ function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, github
   return (
     <Tilt className='lg:w-[460px] sm:w-[360px]'>
       <div className='flex flex-col p-3 border-4 border-gray-600 bg-black/70 rounded-3xl h-[500px]'>
-        <div className='rounded-4xl flex-1 flex'>
-          <img src={projectImg} alt="hotelmang" className='rounded-3xl object-center object-cover border-4 border-[#25291C]'/>
+        <div className='rounded-4xl flex-1 flex overflow-hidden'>
+          <img src={projectImg} alt="hotelmang" className='rounded-3xl hover:scale-104 transition-all object-center object-cover border-4 border-[#25291C]'/>
         </div>
 
         <div className='mt-[15px] text-white text-[12px]'>
           <h1 className='text-xl text-gray-400 font-bold'>{projectTitle}</h1>
           <p className='pt-[10px] text-[##25291C]'>{projectInfo}</p>
           <div className='flex flex-wrap gap-2 text-[#E6E49F] justify-center'>
-            {techStacks.map((stack, index) => (<p className={`flex gap-1 items-center mt-[10px] ${(index % 2) == 0 ? 'bg-amber-400/50' : 'bg-blue-700/30'}   px-3 rounded-2xl py-1`}>
-            <img src={stack.imgSrc} width={15} alt="" className=''/>
+            {techStacks.map((stack, index) => (<p key={index} className={`flex gap-1 items-center mt-[10px] ${(index % 2) == 0 ? 'bg-amber-400/50' : 'bg-blue-700/30'}   px-3 rounded-2xl py-1`}>
+            <img src={stack.imgSrc} width={15} alt="img" className='d'/>
             {stack.stack}</p>))}
           </div>
 
