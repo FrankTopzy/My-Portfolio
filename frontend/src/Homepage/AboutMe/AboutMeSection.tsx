@@ -19,7 +19,7 @@ function AboutMeSection() {
             </p>
           </div>
 
-          <div className="mt-20 flex justify-center flex-wrap gap-10">
+          <div className="mt-10 sm:mt-15 flex justify-center flex-wrap gap-10">
             {services.map((service, index) => (
             <ServiceCard src={service.imageSrc} progLang={service.langName} key={index}/>
             ))}
