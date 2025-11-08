@@ -13,7 +13,7 @@ function Projects() {
 
           <div className='my-[50px] w-full items-center gap-6 flex flex-wrap'>
             {projects.map((project) => (
-              <ProjectCard projectTitle={project.title} projectInfo={project.projectInfo} techStacks={project.techStack} projectLink={project.liveLink} githubLink={project.sourceCode} projectImg={project.imgSrc}/>
+              <ProjectCard key={project.id} projectTitle={project.title} projectInfo={project.projectInfo} techStacks={project.techStack} projectLink={project.liveLink} githubLink={project.sourceCode} projectImg={project.imgSrc}/>
             ))}
           </div>
         </div>
