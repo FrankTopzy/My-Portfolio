@@ -41,7 +41,7 @@ function HeroSection() {
                 <Link to={'https://www.instagram.com/frank_topzy'} target='blank'><img src={instaLogo} alt="" className='rounded-full hover:scale-110 hover:translate-y-[-5px] transition-all max-sm:w-[40px]'/></Link>
               </div>
               
-              <a href={resumePDF} download target='blank' className="flex gap-3 group items-center px-5 py-2 rounded-4xl text-white bg-[#25291C] mt-7 self-center border-2 border-[#E6E49F] hover:card-shadow transition-all">Download Resume <FaArrowDown className='group-hover:translate-x-1 transition-all animate-bounce'/></a>
+              <a href={resumePDF} download target='blank' className="flex gap-3 group items-center px-5 py-2 rounded-4xl text-white bg-[#25291C] mt-7 self-center border-2 border-[#E6E49F] hover:card-shadow transition-all">Download Resume <FaArrowDown className=' transition-all animate-bounce'/></a>
             </div>
           </div>
         </div>
