@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub } from 'react-icons/fa6';
+import { FaGithub, FaLink } from 'react-icons/fa6';
 import Tilt from 'react-parallax-tilt'
 //import image from '../assets/projects/cart.png'
 import type { TechStack } from '../data/types';
@@ -32,7 +32,7 @@ function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, github
           </div>
 
           <div className='flex gap-2 mt-[15px] item-center justify-center'>
-            <Link to={projectLink} target='blank' className='transition-all py-1 hover:text-gray-300 px-3 bg-green-600/50 rounded-2xl cursor-pointer'>Live Link</Link>
+            <Link to={projectLink} target='blank' className='flex items-center gap-1 transition-all py-1 hover:text-gray-300 px-3 bg-green-600/50 rounded-2xl cursor-pointer'><FaLink/> Live Link</Link>
             <Link to={githubLink} target='blank' className='bg-green-600/50 hover:text-gray-300 transition-all cursor-pointer py-1 px-3 rounded-2xl flex items-center gap-1'><FaGithub/> Github Link</Link>
           </div>
         </div>
