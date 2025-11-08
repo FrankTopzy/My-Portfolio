@@ -11,7 +11,7 @@ function Projects() {
           <Title title='My Projects' align='left'/>
           <p className='max-sm:text-[12px] sm:text-left text-center'>Following projects showcase my skills and experience through examples of my work. Each project is briefly described with links to code repositories in it.</p>
 
-          <div className='my-[30px] w-full items-center gap-6 flex flex-wrap'>
+          <div className='my-[30px] sm:my-[50px] w-full items-center gap-6 flex flex-wrap'>
             {projects.map((project) => (
               <ProjectCard key={project.id} projectTitle={project.title} projectInfo={project.projectInfo} techStacks={project.techStack} projectLink={project.liveLink} githubLink={project.sourceCode} projectImg={project.imgSrc}/>
             ))}
