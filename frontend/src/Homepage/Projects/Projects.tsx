@@ -9,7 +9,7 @@ function Projects() {
       <section className='pt-[100px] pb-[40px] max-w-[1350px]'>
         <div className='px-[30px] sm:px-[90px] xl:px-[200px]'>
           <Title title='My Projects' align='left'/>
-          <p>Following projects showcase my skills and experience through examples of my work. Each project is briefly described with links to code repositories in it.</p>
+          <p className='max-sm:text-[12px] sm:text-left text-center'>Following projects showcase my skills and experience through examples of my work. Each project is briefly described with links to code repositories in it.</p>
 
           <div className='my-[50px] w-full items-center gap-6 flex flex-wrap'>
             {projects.map((project) => (

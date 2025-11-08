@@ -45,7 +45,7 @@ function VerticalTime() {
               </div>
 
               <div>
-                <ul className='list-disc'>
+                <ul className='list-disc max-sm:text-[12px]'>
                   <li>Acquired hands-on knowledge of Graphics Design, delving into the design world.</li>
                   <li>also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.</li>
                 </ul>
@@ -81,7 +81,7 @@ function VerticalTime() {
               </div>
 
               <div>
-                <ul className='list-disc'>
+                <ul className='list-disc max-sm:text-[12px]'>
                   <li>Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.</li>
                   <li>also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.</li>
                 </ul>
@@ -117,7 +117,7 @@ function VerticalTime() {
               </div>
 
               <div>
-                <ul className='list-disc'>
+                <ul className='list-disc max-sm:text-[12px]'>
                   <li>Learnt the basics of Web development.</li>
                   <li>Learnt different frameworks and preprocessor such as Tailwind CSS and SASS respectively.</li>
                   <li>I also bacame a React + Typescript developer building different functioning and responsive websites.</li>
@@ -154,7 +154,7 @@ function VerticalTime() {
               </div>
 
               <div>
-                <ul className='list-disc'>
+                <ul className='list-disc max-sm:text-[12px]'>
                   <li>Completed my internship, gaining a strong foundation in Frontend Development, including brief knowledge about Backend Development.</li>
                   <li>Acquired practical skills in web design and server side hosting with XAMPP, including sending info and retrieving from databases.</li>
                   <li>Developed responsive websites with HTML, CSS and Hypertext Preprocessor (PHP).</li>

@@ -22,7 +22,7 @@ function Experience() {
               <Tilt key={lang.id}>
                 <div className="border group flex flex-col items-center gap-3 p-4 w-[130px] hover:bg-[#E6E49F] hover:text-black hover:transition-all">
                   <img src={lang.imgSrc} alt={lang.name} width={40} className="group-hover:translate-y-[-2px] transition-all"/>
-                  <p>{lang.name}</p>
+                  <p className=" max-sm:text-[12px]">{lang.name}</p>
                 </div>
               </Tilt>
             ))}

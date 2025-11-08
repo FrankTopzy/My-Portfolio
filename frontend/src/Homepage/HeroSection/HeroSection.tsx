@@ -16,7 +16,7 @@ function HeroSection() {
   return (
     <div className="bg-black text-white flex justify-center pt-27 lg:pt-34" id='home'>
       <section className='pb-20 relative'>
-        <div className='flex gap-[20px] sm md:gap-[100px] lg:gap-[130px] py-[30px] lg:py-[80px] flex-col md:flex-row-reverse'>
+        <div className='flex gap-[20px] sm md:gap-[100px] lg:gap-[130px] pt-0 pb-4 lg:py-[80px] flex-col md:flex-row-reverse'>
           <div className='flex flex-col items-center gap-9 justify-center'>
             <img src={frank} alt="" className={`${Styles.blobImg} w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] object-cover`}/>
             <p className='py-2 px-10 rounded-4xl bg-green-600/20 hover:bg-grern-500/20 text-green-600 hover:text-green-500 transition-all'>Open to Work</p>
