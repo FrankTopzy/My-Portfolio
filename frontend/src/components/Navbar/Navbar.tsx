@@ -2,7 +2,7 @@ import Styles from './navbar.module.css';
 import { BiCode } from 'react-icons/bi';
 import { BiCodeAlt } from 'react-icons/bi';
 import { Link , animateScroll as scroll} from 'react-scroll';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { navLinks } from '../../data/constants';
 import type { NavbarType } from '../../data/types';
@@ -10,6 +10,8 @@ import type { NavbarType } from '../../data/types';
 
 function Navbar({isOpen, setIsOpen}: NavbarType) {
   const [scrollUp, setScrollUp] = useState<boolean>(false);
+  const navRef = useRef(null);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     function handleScroll():void {
@@ -21,6 +23,18 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
     return () => window.removeEventListener('scroll', handleScroll);
     
   }, [])
+
+
+  //When the target isn't the navMenu, close navMenu
+  /*window.addEventListener('click', (e) => {
+    if (e.target == navRef.current && e.target == menuRef.current ) {
+      console.log('clicked');
+      return;
+    }
+
+    setIsOpen(false);
+    
+  })*/
 
   return (
     <div className="flex justify-center w-full">
@@ -44,7 +58,7 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
           </nav>
 
           {isOpen && (
-            <nav className={`${Styles.rNav} absolute  w-[200px] bg-[var(--navbar-bg)] right-0 top-12 rounded-2xl`}>
+            <nav className={`${Styles.rNav} absolute  w-[200px] bg-[var(--navbar-bg)] right-0 top-12 rounded-2xl`} ref={navRef}>
               <ul className="flex flex-col items-start">
                 {navLinks.map((link, index) => (
                   <Link to={`${link.id}`} spy={true} smooth={true} duration={500} key={index} className='flex items-center gap-1 justify-center px-5 py-4 cursor-pointer whitespace-nowrap hover:translate-y-[-4px] hover:scale-105 transition-all hover:font-bold' onClick={() => setIsOpen(false)}>
@@ -56,7 +70,7 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
             </nav>
           )}
 
-          <div className={`${Styles.navMenu} block md:hidden`} onClick={() => setIsOpen(!isOpen)}>
+          <div className={`${Styles.navMenu} block md:hidden`} onClick={() => setIsOpen(!isOpen)} ref={menuRef}>
             <HiOutlineMenuAlt2 className='text-2xl'/>
           </div>
         </div>
