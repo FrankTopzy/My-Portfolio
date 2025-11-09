@@ -1,9 +1,10 @@
 import type { NavLinksType, TechnologiesType } from "./types";
 import { v4 as uuidV4 } from 'uuid'
 //Project Images
-import clothexImg from '../assets/projects/cart.png'
-import belleFullImg from '../assets/projects/Screenshot (25).png';
-import hotelMangImg from '../assets/projects/Screenshot (49).png'
+import clothexImg from '../assets/projects/clothex.png'
+import belleFullImg from '../assets/projects/Bellefull.png';
+import hotelMangImg from '../assets/projects/HotelMang.png';
+import ngraveImg from '../assets/projects/Ngrave.png';
 
 export const navLinks:NavLinksType[] = [{
   title: "Home",
@@ -226,7 +227,7 @@ export const projects = [{
   sourceCode: 'https://github.com/FrankTopzy/BelleFull.git'
 }, {
   id: uuidV4(),
-  imgSrc: clothexImg,
+  imgSrc: ngraveImg,
   title: 'NGRAVE Website - Cloned',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
 
