@@ -2,10 +2,11 @@ import Styles from './navbar.module.css';
 import { BiCode } from 'react-icons/bi';
 import { BiCodeAlt } from 'react-icons/bi';
 import { Link , animateScroll as scroll} from 'react-scroll';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { navLinks } from '../../data/constants';
 import type { NavbarType } from '../../data/types';
+import { PortfolioContext } from '../Context';
 
 
 function Navbar({isOpen, setIsOpen}: NavbarType) {
@@ -13,9 +14,12 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
   const navRef = useRef(null);
   const menuRef = useRef(null);
 
+  const { setIsTop } = useContext(PortfolioContext) ?? {};
+
   useEffect(() => {
     function handleScroll():void {
        window.scrollY > 10 ? setScrollUp(true) : setScrollUp(false);
+       window.scrollY < 5 ? setIsTop && setIsTop(true) : setIsTop && setIsTop(false);
     }
 
     window.addEventListener('scroll', handleScroll);
