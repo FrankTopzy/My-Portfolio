@@ -5,8 +5,8 @@ function Footer() {
   const year = date.getFullYear();
 
   return (
-    <div className="flex flex-col text-[var(--navbar-bg)] py-4 min-h-[10vh] items-center font-bold">
-      <p>Built with TypeScript, ReactJs, Vite.js, TailwindCss, Framer Motion, and Vercel.</p>
+    <div className="flex flex-col w-full text-[var(--navbar-bg)] px-4 py-4 min-h-[10vh] items-center justify-center font-bold">
+      <p className="text-center">Built with TypeScript, ReactJs, Vite.js, TailwindCss, Framer Motion, and Vercel.</p>
       <p>Star this project on Github</p>
       <p className="flex items-center gap-2"><FaCopyright/> Frank Topzy {year}</p>
     </div>
