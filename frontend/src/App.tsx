@@ -47,7 +47,7 @@ function App() {
       <FollowCursor/>
 
       {!isTop && (
-        <div className="fixed bg-[var(--color-2)] text-white bottom-2 right-2 p-2 rounded-full border-3 border-[var(--navbar-bg)]">
+        <div className={`.card-shadow fixed bg-[var(--color-2)] text-white bottom-2 right-2 p-2 rounded-full border-3 border-[var(--navbar-bg)]`}>
           <FaArrowUp color='black' onClick={() => scrollTo(0, 0)}/>
         </div>
       )}
