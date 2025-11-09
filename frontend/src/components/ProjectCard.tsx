@@ -27,7 +27,7 @@ function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, github
           <p className='pt-[10px] text-[##25291C]'>{projectInfo}</p>
           <div className='flex flex-wrap gap-2 text-[#E6E49F] justify-center'>
             {techStacks.map((stack, index) => (<p key={index} className={`flex gap-1 items-center mt-[10px] ${(index % 2) == 0 ? 'bg-amber-400/50' : 'bg-blue-700/30'}   px-3 rounded-2xl py-1`}>
-            <img src={stack.imgSrc} width={15} alt="img" className='d'/>
+            <img src={stack.imgSrc} width={15} alt="img"/>
             {stack.stack}</p>))}
           </div>
 
