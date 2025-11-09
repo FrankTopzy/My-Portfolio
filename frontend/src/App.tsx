@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import FollowCursor from "./components/Cursor"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./Homepage/Home"
+import { FaArrowUp } from "react-icons/fa6"
+import { PortfolioContext } from "./components/Context"
 
 
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const {isTop} = useContext(PortfolioContext) ?? {}; 
 
   setTimeout(() => {
     setIsLoading(false)
@@ -42,6 +45,12 @@ function App() {
       <Home/>
       <Footer/>
       <FollowCursor/>
+
+      {!isTop && (
+        <div className="fixed bg-[var(--color-2)] text-white bottom-2 right-2 p-2 rounded-full border-3 border-[var(--navbar-bg)]">
+          <FaArrowUp color='black' onClick={() => scrollTo(0, 0)}/>
+        </div>
+      )}
     </>
   )
 }
