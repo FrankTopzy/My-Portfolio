@@ -10,7 +10,7 @@ function AboutMeSection() {
   return (
     <div className="bg-[var(--navbar-bg)] text-white flex justify-center pb-[100px]" id='about'>
       <section className="relative pt-[100px] max-w-[1350px]">
-        <div className="px-[30px] sm:px-[90px] xl:px-[200px] w-full">
+        <div className="px-[30px] sm:px-[90px] md:px-[120px] xl:px-[200px] w-full">
           <Title title="About Me" align="left"/>
 
           <div>
@@ -19,7 +19,7 @@ function AboutMeSection() {
             </p>
           </div>
 
-          <div className="mt-10 sm:mt-15 flex justify-center flex-wrap gap-7 sm:gap-10">
+          <div className="mt-10 sm:mt-15 flex justify-between sm:justify-center flex-wrap gap-4 sm:gap-7 lg:gap-10 w-full">
             {services.map((service, index) => (
             <ServiceCard src={service.imageSrc} progLang={service.langName} key={index}/>
             ))}
