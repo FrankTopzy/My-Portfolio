@@ -201,7 +201,7 @@ export const projects = [{
     imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
   }],
 
-  liveLink: 'https://franksminireactapp.netlify.app/',
+  liveLink: 'https://clothex-mu.vercel.app/',
   sourceCode: 'https://github.com/FrankTopzy/Clothex.git'
 }, {
   id: uuidV4(),
@@ -228,7 +228,7 @@ export const projects = [{
 }, {
   id: uuidV4(),
   imgSrc: ngraveImg,
-  title: 'NGRAVE Website - Cloned',
+  title: 'NGRAVE Website',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
 
   techStack: [{
@@ -267,6 +267,6 @@ export const projects = [{
     imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
   }],
 
-  liveLink: 'https://franksminireactapp.netlify.app/',
-  sourceCode: 'https://github.com/FrankTopzy/Ngrave.git'
+  liveLink: 'https://hotel-mang.vercel.app/',
+  sourceCode: 'https://github.com/FrankTopzy/Hostel-Management'
 }]
