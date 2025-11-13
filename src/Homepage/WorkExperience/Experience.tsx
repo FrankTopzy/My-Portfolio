@@ -10,7 +10,7 @@ function Experience() {
     <div className="bg-black text-white flex flex-col items-center" id="experience">
       <section className="pt-[100px] lg:px-[200px] px-[0px] pb-10 max-w-[1300px]">
         <div className="">
-          <Title title="Work Experience" align="center" pad={20}/>
+          <Title title="Work Experience" align="center"/>
         </div>
 
         <VerticalTimelin/>
