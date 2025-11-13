@@ -1,4 +1,4 @@
-import { useState, type KeyboardEvent } from 'react'
+import { useState } from 'react'
 import Title from '../../components/Title'
 
 function ContactMe() {
@@ -6,10 +6,6 @@ function ContactMe() {
 
   const handleChange = (text: string) => {
     setMessage(text)
-  }
-
-  const handleSubmit = (e: KeyboardEvent) => {
-    e.preventDefault();
   }
 
   return (
@@ -31,7 +27,7 @@ function ContactMe() {
           </div>
 
           <div className=''>
-            <textarea name="" onChange={(e) => handleChange(e.target.value)} id="" placeholder='Your Message...' className='px-3 py-1.5 h-[300px] w-full bg-amber-500'></textarea>
+            <textarea name="" value={message} onChange={(e) => handleChange(e.target.value)} id="" placeholder='Your Message...' className='px-3 py-1.5 h-[300px] w-full bg-amber-500'></textarea>
           </div>
 
           <button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl'>Send Message</button>

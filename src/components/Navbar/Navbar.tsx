@@ -1,7 +1,7 @@
 import Styles from './navbar.module.css';
 import { BiCode } from 'react-icons/bi';
 import { BiCodeAlt } from 'react-icons/bi';
-import { Link , animateScroll as scroll} from 'react-scroll';
+import { Link } from 'react-scroll';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { navLinks } from '../../data/constants';

@@ -1,7 +1,7 @@
 //import React from 'react'
 import Tilt  from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
-import frank from '../assets/frank.jpg'
+//import frank from '../assets/frank.jpg'
 //import { fadeIn, textVariant } from '../utils/motion';
 
 type ServiceCardPropsType = {

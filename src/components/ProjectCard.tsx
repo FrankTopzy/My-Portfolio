@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import { FaGithub, FaLink } from 'react-icons/fa6';
 import Tilt from 'react-parallax-tilt'
 //import image from '../assets/projects/cart.png'
