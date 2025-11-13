@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Title from '../../components/Title'
 import ProjectCard from '../../components/ProjectCard'
 import { projects } from '../../data/constants'
+import Styles from './project.module.css'
 
 function Projects() {
   return (
@@ -11,7 +12,7 @@ function Projects() {
           <Title title='My Projects' align='left'/>
           <p className='max-sm:text-[12px] sm:text-left text-center'>Following projects showcase my skills and experience through examples of my work. Each project is briefly described with links to code repositories in it.</p>
 
-          <div className='my-[30px] sm:my-[50px] px-10 md:px-0 w-full items-center gap-6 flex flex-wrap'>
+          <div className={`${Styles.res} my-[30px] sm:my-[50px] px-0 sm:px-5 md:px-0 w-full items-center gap-6 flex flex-wrap`}>
             {projects.map((project) => (
               <ProjectCard key={project.id} projectTitle={project.title} projectInfo={project.projectInfo} techStacks={project.techStack} projectLink={project.liveLink} githubLink={project.sourceCode} projectImg={project.imgSrc}/>
             ))}

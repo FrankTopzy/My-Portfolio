@@ -17,9 +17,9 @@ type Project = {
 function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, githubLink, projectImg}: Project) {
   return (
     <Tilt className='md:w-[47%] sm:w-full'>
-      <div className='flex flex-col p-3 border-4 border-gray-600 bg-black/60 rounded-3xl h-[500px]'>
-        <div className='rounded-4xl flex flex-1 justify-center overflow-hidden'>
-          <img src={projectImg} alt="hotelmang" className='rounded-3xl flex-1 hover:scale-104 transition-all object-center object-cover border-4 border-[#25291C]'/>
+      <div className='flex flex-col p-3 border-2 border-gray-600 bg-black/60 rounded-3xl h-[500px]'>
+        <div className='rounded-xl flex flex-1 justify-center overflow-hidden'>
+          <img src={projectImg} alt="hotelmang" className='rounded-xl flex-1 hover:scale-104 transition-all object-center object-cover'/>
         </div>
 
         <div className='mt-[15px] text-white text-[12px]'>
