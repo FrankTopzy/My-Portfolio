@@ -47,3 +47,17 @@ body{
   font-family: 'DM sans' !important;
   user-select: none;
 }
+
+input, textarea {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 100;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+input::placeholder {
+  color: white;
+}
