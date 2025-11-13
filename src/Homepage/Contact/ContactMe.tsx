@@ -38,20 +38,20 @@ function ContactMe() {
 
   return (
     <div className="bg-black text-white flex min-h-[70vh] pt-[100px] pb-[40px] justify-center" id="contact">
-      <section className='max-w-[900px] flex-1'>
+      <section className='max-w-[900px] mx-5 lg:mx-0 flex-1'>
         <Title title="Contact Me"/>
 
         <form onSubmit={handleSubmit(onSubmit)} className='flex gap-3 flex-col'>
           <input type="hidden" name="access_key" value="74fbda5c-ec04-4c4c-954a-029a2d682f90"></input>
           <div className='flex flex-col gap-3'>
-            <div className='flex justify-between'>
-              <input type="text" {...register("first_name", { required: true })} placeholder='Enter Your First Name...' className='w-[49%] px-3 py-1.5 bg-amber-300' required/>
-              <input type="text" {...register("last_name", { required: true })} placeholder='Enter Your Last Name...' className='px-3 py-1.5 w-[49%] bg-green-600' required/>
+            <div className='flex flex-col gap-3 md:flex-row md:gap-0 justify-between'>
+              <input type="text" {...register("first_name", { required: true })} placeholder='Enter Your First Name...' className='md:w-[49%] w-full px-3 py-1.5 bg-amber-300' required/>
+              <input type="text" {...register("last_name", { required: true })} placeholder='Enter Your Last Name...' className='px-3 py-1.5 md:w-[49%] w-full bg-green-600' required/>
             </div>
 
-            <div className='flex justify-between'>
-              <input type="text" {...register("number", { required: true })} placeholder='Enter Your Mobile/Whatsapp Number....' className='w-[49%] px-3 py-1.5 bg-amber-200' required/>
-              <input type="email" {...register("email", { required: true })} placeholder='Enter Your Email Address...' className='px-3 py-1.5 w-[49%] bg-amber-950' required/>
+            <div className='flex flex-col gap-3 md:flex-row md:gap-0 justify-between'>
+              <input type="text" {...register("number", { required: true })} placeholder='Enter Your Mobile/Whatsapp Number....' className='md:w-[49%] w-full px-3 py-1.5 bg-amber-200' required/>
+              <input type="email" {...register("email", { required: true })} placeholder='Enter Your Email Address...' className='px-3 py-1.5 md:w-[49%] w-full bg-amber-950' required/>
             </div>
           </div>
 
