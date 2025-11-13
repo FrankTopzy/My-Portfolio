@@ -1,15 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Title from '../../components/Title'
 // npm install react-hook-form @web3forms/react
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 
 function ContactMe() {
-  const [message, setMessage] = useState<string>('');
-
-  const handleChange = (text: string) => {
-    setMessage(text)
-  }
 
   /*useEffect(() => {
     console.log(message);
@@ -32,11 +27,12 @@ function ContactMe() {
     onSuccess: (msg, data) => {
       setIsSuccess(true);
       setResult(msg);
-      reset();
+      reset(data);
     },
     onError: (msg, data) => {
       setIsSuccess(false);
       setResult(msg);
+      reset(data);
     },
   });
 
@@ -60,12 +56,12 @@ function ContactMe() {
           </div>
 
           <div className=''>
-            <textarea value={message} {...register("message", { required: true })} onChange={(e) => handleChange(e.target.value)} id="" placeholder='Your Message...' className='px-3 py-1.5 h-[300px] w-full bg-amber-500'></textarea>
+            <textarea {...register("message", { required: true })} id="" placeholder='Your Message...' className='px-3 py-1.5 h-[300px] w-full bg-amber-500'></textarea>
           </div>
 
           <button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl'>Send Message</button>
 
-          <div>{result}</div>
+          {isSuccess && (<div>{result}</div>)}
         </form>
       </section>
     </div>
