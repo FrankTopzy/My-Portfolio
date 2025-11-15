@@ -1,18 +1,18 @@
 import { ReactTyped } from "react-typed";
+import Styles from '../Homepage/HeroSection/hero.module.css'
 
 const TypedJs = () => (
   <ReactTyped
     strings={[
-      "FRONTEND DEVELOPER.",
-      "GRAPHICS DESIGNER.",
+      "I'm a FRONTEND DEVELOPER.",
+      "With over 13 completed projects.",
     ]}
     typeSpeed={40}
     backSpeed={50}
-    attr="placeholder"
+    attr="value"
     loop
-    className="uppercase"
   >
-    <input type="text" />
+    <input type="text" className={`${Styles.fancyText} uppercase w-[85%] p-2.5 text-center`} readOnly/>
   </ReactTyped>
 );
 
