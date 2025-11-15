@@ -15,7 +15,7 @@ function AboutMeSection() {
 
           <div>
             <p className="text-center sm:text-left max-sm:text-[12px]">
-              I am a Computer Science student at Federal University of Agriculture, Abeokuta  with over 1 year plus of experience as a Frontend Web Developer. I blend technical expertise with security knowledge to craft well-rounded web applications. I am looking to join a company that values innovation, collaboration, and continuous learning and am confident that my enthusiasm and drive will help me succeed in any role that leverages my passion for technology. Outside of coding, I am a Melomaniac and a Forex Trader. I continuously seek to enhance my skills and stay updated with the latest industry technologies.
+              I am a Computer Science student at Federal University of Agriculture, Abeokuta  with over 1 year plus of experience as a Frontend Web Developer. I blend technical expertise with security knowledge to craft well-rounded web applications. I am looking to join a company that values innovation, collaboration, and continuous learning and I'm confident that my enthusiasm and drive will help me succeed in any role that leverages my passion for technology. Outside of coding, I am a Melomaniac and a Forex Trader. I continuously seek to enhance my skills and stay updated with the latest industry technologies.
             </p>
           </div>
 
