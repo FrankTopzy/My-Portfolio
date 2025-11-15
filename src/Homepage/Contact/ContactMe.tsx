@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Title from '../../components/Title'
 // npm install react-hook-form @web3forms/react
 import { useForm } from "react-hook-form";
@@ -41,15 +41,6 @@ function ContactMe() {
     },
   });
 
-  useEffect(() => {
-    let timer;
-    if (isSuccess) {
-      timer = setTimeout(() => {
-        setPopup(false);
-      }, 3000); // Popup will disappear after 3 seconds
-    }
-  }, [isSuccess]);
-
   return (
     <div className="bg-black text-white flex min-h-[70vh] pt-[100px] pb-[40px] justify-center" id="contact">
       <section className='max-w-[900px] mx-5 lg:mx-0 flex-1'>
@@ -76,7 +67,7 @@ function ContactMe() {
           <button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl hover:bg-[var(--color-2)] hover:text-black transition-all'>Send Message</button>
 
           {isSuccess && (<div className={`popup w-[90%] sm:w-[45%] md:w-[35%] relative ${popup ? 'show' : ''}`}>
-            <p>Email {!isSuccess && 'not'} sent successfully!</p>
+            <p>Email {!isSuccess && 'not'} sent successfully! <span className='hidden'>{result}</span></p>
             <p className=' rounded-full bg-[var(--navbar-bg)] p-2.5'><FaCheck className='text-green-500 text-2xl'/></p>
 
             <FaTimes className='absolute top-2 right-2' onClick={() => setPopup(false)}/>
