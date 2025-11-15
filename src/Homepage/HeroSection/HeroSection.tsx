@@ -30,7 +30,7 @@ function HeroSection() {
                 a.k.a Frank Topzy
               </h1>
 
-              <h2 className='text-[16px] md:text-xl mt-2'><span><TypedJs/></span></h2>
+              <h2 className='mt-2'><span><TypedJs/></span></h2>
             </div>
 
             <div className='flex flex-col'>
