@@ -64,7 +64,7 @@ function ContactMe() {
             <textarea {...register("text", { required: true })} id="" placeholder='Your Message...' className='px-3 pt-2.5 h-[300px] w-full bg-amber-950'></textarea>
           </div>
 
-          <button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl hover:bg-[var(--color-2)] hover:text-black transition-all'>Send Message</button>
+          <button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl hover:bg-[var(--color-2)] hover:text-black transition-all cursor-pointer'>Send Message</button>
 
           {isSuccess && (<div className={`popup w-[90%] sm:w-[45%] md:w-[35%] relative ${popup ? 'show' : ''}`}>
             <p>Email {!isSuccess && 'not'} sent successfully! <span className='hidden'>{result}</span></p>
