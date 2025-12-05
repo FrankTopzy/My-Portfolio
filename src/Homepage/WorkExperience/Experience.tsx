@@ -16,7 +16,7 @@ function Experience() {
         <VerticalTimelin/>
 
         <div className="w-full mt-20 mb-7">
-          <h2 className="text-3xl text-center md:text-left">Tech Stack</h2>
+          <h2 className="text-3xl text-center">Tech Stack</h2>
           <div className="w-full flex flex-wrap justify-center gap-4 mt-5">
             {technologies.map((lang) => (
               <Tilt key={lang.id}>
